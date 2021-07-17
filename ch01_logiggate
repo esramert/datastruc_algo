@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+class LogicGate:
+    def __init__(self, lbl):
+        self.label = lbl
+        self.output = None
+
+    def get_label(self):
+        return self.label
+    
+    def get_output(self):
+        self.output = self.perform_gate_logic()
+        return self.output
+
+class BinaryGate(LogicDate):
+    def __init__(self, lbl):
+        self.pin_a = None
+        self.pin_b = None
+    
+    def get_pin_a(self):
+        return int(input(f"Enter pin a input for gate {self.get_label()}: "))
+    
+    def get_pin_b(self):
+        return int(input(f"Enter pin b input for gate {self.get_label()}: "))
+
